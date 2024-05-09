@@ -11,6 +11,10 @@ const Header = () => {
     navigate("/");
   }, []);
 
+  const goPageCart = () => {
+    navigate("/cart");
+  };
+
   return (
     <header className="container">
       <div className="row">
@@ -40,8 +44,11 @@ const Header = () => {
                     data-id="search-expander"
                     className="header-controls-pic header-controls-search"
                   ></div>
-                  <div className="header-controls-pic header-controls-cart">
-                    <div className="header-controls-cart-full">1</div>
+                  <div
+                    onClick={goPageCart}
+                    className="header-controls-pic header-controls-cart"
+                  >
+                    <div className="header-controls-cart-full"></div>
                     <div className="header-controls-cart-menu"></div>
                   </div>
                 </div>

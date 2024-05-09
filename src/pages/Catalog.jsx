@@ -5,7 +5,7 @@ const Catalog = () => {
         <div className="banner">
           <img
             src="src/assets/banner.jpg"
-            class="img-fluid"
+            className="img-fluid"
             alt="К весне готовы!"
           ></img>
           <h2 className="banner-header">К весне готовы!</h2>
