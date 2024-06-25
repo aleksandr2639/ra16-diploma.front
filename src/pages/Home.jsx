@@ -1,5 +1,5 @@
 import TopSalesProducts from "../components/Products/TopSalesProducts";
-import CatalogProducts from "../components/CatalogProducts";
+import CatalogProducts from "../components/Catalog/CatalogProducts.jsx";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchTopSales } from "../redux//TopSalesProductsSlice";

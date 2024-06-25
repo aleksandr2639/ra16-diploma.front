@@ -7,17 +7,17 @@ const Information = () => {
         <h5>Информация</h5>
         <nav className="nav flex-column">
           <li className="nav-item">
-            <Link className="nav-link" to="/about">
+            <Link className="nav-link" to={import.meta.env.VITE_ABOUT}>
               О магазине
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/catalog">
+            <Link className="nav-link" to={import.meta.env.VITE_CATALOG}>
               Каталог
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/contacts">
+            <Link className="nav-link" to={import.meta.env.VITE_CONTACTS}>
               Контакты
             </Link>
           </li>

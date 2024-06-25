@@ -13,7 +13,6 @@ export const fetchCategory = createAsyncThunk(
     try {
       const response = await fetch(`${import.meta.env.VITE_URL}categories`);
       const data = await response.json();
-      data.unshift({ id: 0, title: "Все" });
       if (!response.ok) {
         throw new Error(response.statusText);
       }

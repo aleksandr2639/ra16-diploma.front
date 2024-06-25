@@ -22,7 +22,7 @@ const HeaderForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/catalog");
+    navigate(import.meta.env.VITE_CATALOG);
   };
 
   return (

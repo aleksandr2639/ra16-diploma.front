@@ -20,7 +20,6 @@ const AboutProductsView = (props) => {
     material,
     reason,
     season,
-    heelSize,
     price,
   } = props;
 
@@ -39,7 +38,7 @@ const AboutProductsView = (props) => {
       total: price * quantity,
     };
     dispatch(addProductToCart(product));
-    navigate("/cart");
+    navigate(import.meta.env.VITE_CART);
   };
 
   const onSelectSizeClick = (size) => {

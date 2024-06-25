@@ -14,22 +14,22 @@ const HeaderComponent = () => {
             <div className="collapse navbar-collapse" id="navbarMain">
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to={import.meta.env.VITE_MAIN}>
                     Главная
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/catalog">
+                  <Link className="nav-link" to={import.meta.env.VITE_CATALOG}>
                     Каталог
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/about">
+                  <Link className="nav-link" to={import.meta.env.VITE_ABOUT}>
                     О магазине
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/contacts">
+                  <Link className="nav-link" to={import.meta.env.VITE_CONTACTS}>
                     Контакты
                   </Link>
                 </li>

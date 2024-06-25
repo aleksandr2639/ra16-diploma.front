@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import { selectCatalog, fetchCatalog } from "../redux/CatalogSlice";
-import { selectCategories } from "../redux/CategorySlice";
-import Error from "../components/Error/Error";
+import { selectCatalog, fetchCatalog } from "../../redux/CatalogSlice.jsx";
+import { selectCategories } from "../../redux/CategorySlice.jsx";
+import Error from "../Error/Error.jsx";
 
 const CardList = ({ children }) => {
   const { catalogError, search } = useSelector(selectCatalog);

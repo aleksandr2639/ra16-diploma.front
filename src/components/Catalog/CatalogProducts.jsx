@@ -1,11 +1,11 @@
-import Card from "./Card";
-import CardList from "./CardList";
-import Categories from "./Categories";
-import ShowBtn from "./ShowBtn";
-import Preloader from "./Preloader";
+import Card from "./Card.jsx";
+import CardList from "./CardList.jsx";
+import Categories from "../Category/Categories.jsx";
+import ShowBtn from "../ShowBtn.jsx";
+import Preloader from "../Preloader.jsx";
 import { useEffect } from "react";
-import { selectCategories, fetchCategory } from "../redux/CategorySlice";
-import { selectCatalog, fetchCatalog } from "../redux/CatalogSlice";
+import { selectCategories, fetchCategory } from "../../redux/CategorySlice.jsx";
+import { selectCatalog, fetchCatalog } from "../../redux/CatalogSlice.jsx";
 import { useDispatch, useSelector } from "react-redux";
 
 const CatalogProducts = ({ children }) => {

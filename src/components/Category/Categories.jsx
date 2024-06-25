@@ -1,10 +1,12 @@
-import Category from "./Category";
+import Category from "./Category.jsx";
 import { useSelector } from "react-redux";
-import { selectCategories, fetchCategory } from "../redux/CategorySlice";
-import Error from "../components/Error/Error";
+import { selectCategories, fetchCategory } from "../../redux/CategorySlice.jsx";
+import Error from "../Error/Error.jsx";
 
 const Categories = ({ categories }) => {
   const { categoriesLoading, categoriesError } = useSelector(selectCategories);
+
+  const newCategories = [{ id: 0, title: "Все" }, ...categories];
 
   return (
     <>
@@ -19,7 +21,7 @@ const Categories = ({ categories }) => {
             />
           )}
           {categories &&
-            categories.map((el) => <Category key={el.id} category={el} />)}
+              newCategories.map((el) => <Category key={el.id} category={el} />)}
         </ul>
       )}
     </>

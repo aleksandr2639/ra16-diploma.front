@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { selectCatalog, fetchCatalog } from "../redux/CatalogSlice";
-import { selectCategories, setSelected } from "../redux/CategorySlice";
+import { selectCatalog, fetchCatalog } from "../../redux/CatalogSlice.jsx";
+import { selectCategories, setSelected } from "../../redux/CategorySlice.jsx";
 
 const Category = ({ category }) => {
   const { selected } = useSelector(selectCategories);

@@ -4,7 +4,7 @@ import {
   selectTopSales,
   fetchTopSales,
 } from "../../redux/TopSalesProductsSlice";
-import Card from "../Card";
+import Card from "../Catalog/Card.jsx";
 import { v4 as uuidv4 } from "uuid";
 
 const TopSalesProducts = () => {

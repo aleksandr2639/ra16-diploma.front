@@ -1,18 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-const saveLocalStorage = (cartItems) => {
-  localStorage.setItem("cart", JSON.stringify(cartItems));
-};
-
-const items =
-  localStorage.getItem("cart") !== null
-    ? JSON.parse(localStorage.getItem("cart"))
-    : [];
-
 const initialState = {
-  cartItems: items,
+  cartItems: [],
   cartLoading: false,
-  cartreError: null,
+  cartError: null,
   orderState: false,
 };
 
@@ -38,11 +29,9 @@ const cartSlice = createSlice({
       } else {
         state.cartItems = [...state.cartItems, action.payload];
       }
-      saveLocalStorage(state.cartItems);
     },
     removeProductFromCart(state, action) {
       state.cartItems.splice(action.payload, 1);
-      saveLocalStorage(state.cartItems);
     },
     resetOrder(state) {
       state.orderState = false;
@@ -52,7 +41,7 @@ const cartSlice = createSlice({
     builder
       .addCase(fetchOrder.pending.type, (state) => {
         state.cartLoading = true;
-        state.cartreError = null;
+        state.cartError = null;
         state.orderState = false;
       })
       .addCase(fetchOrder.fulfilled.type, (state, action) => {
@@ -63,7 +52,7 @@ const cartSlice = createSlice({
         }
       })
       .addCase(fetchOrder.rejected.type, (state, action) => {
-        state.cartreError = action.error;
+        state.cartError = action.error;
         state.cartLoading = false;
         state.orderState = false;
       });

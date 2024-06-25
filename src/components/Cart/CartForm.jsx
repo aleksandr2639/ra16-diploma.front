@@ -14,7 +14,6 @@ export const CartForm = () => {
     const data = Object.fromEntries(formData);
     const phone = data.phone;
     const address = data.address;
-    const agreement = data.agreement;
     const items = cartItems.map((el) => ({
       id: el.id,
       price: el.price,

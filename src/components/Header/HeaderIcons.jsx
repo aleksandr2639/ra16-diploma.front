@@ -19,7 +19,7 @@ const headerIcons = () => {
 
   const onSearchClick = (e) => {
     if (clickedSearch && search) {
-      navigate("/catalog");
+      navigate(import.meta.env.VITE_CATALOG);
     } else {
       dispatch(setSearchNotActive());
     }

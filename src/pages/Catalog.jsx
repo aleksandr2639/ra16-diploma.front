@@ -1,4 +1,4 @@
-import CatalogProducts from "../components/CatalogProducts";
+import CatalogProducts from "../components/Catalog/CatalogProducts.jsx";
 import SearchCard from "../components/SearchCard";
 
 const Catalog = () => {
